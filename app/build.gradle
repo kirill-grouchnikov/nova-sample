@@ -69,9 +69,13 @@ dependencies {
 }
 
 import com.example.novasample.Sample
+import dev.android.playground.nova.core.base.DictionaryKt
 
 task runNova {
-    Sample.main(new File(projectDir, "build/generated/res/custom").path)
+    // Run our theme/style DSL snippet
+    Sample.simpleCoreGenerated()
+    // And write the resulting <style> blocks into build/generated location
+    DictionaryKt.write(new File(projectDir, "build/generated/res/custom").path, true)
 }
 
 gradle.projectsEvaluated {

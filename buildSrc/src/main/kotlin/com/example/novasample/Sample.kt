@@ -17,13 +17,8 @@
 package com.example.novasample
 
 import dev.android.playground.nova.core.base.dp
-import dev.android.playground.nova.core.base.postInit
 import dev.android.playground.nova.core.framework.generated.*
 import dev.android.playground.nova.core.framework.styleables.CoreViewGroup_LayoutStyleable
-import java.io.File
-import java.net.URI
-import java.nio.file.Files
-import java.nio.file.Paths
 
 fun simpleCoreGenerated() {
 
@@ -76,18 +71,4 @@ fun simpleCoreGenerated() {
         layout_height = CoreViewGroup_LayoutStyleable.LayoutHeightEnum.match_parent
     }
 
-}
-
-fun main(folder: String) {
-    simpleCoreGenerated()
-    for (entry in postInit()) {
-        val outputPath = folder + "/" + entry.key
-        val lastSlash = outputPath.lastIndexOf('/')
-        val outputFolder = File(outputPath.substring(0, lastSlash))
-        outputFolder.mkdirs()
-        val outputFile = File(outputFolder, outputPath.substring(lastSlash + 1))
-        println("*** $outputFile in progress! ***")
-        outputFile.writeText(entry.value)
-        println("*** $outputFile generated! ***")
-    }
 }
