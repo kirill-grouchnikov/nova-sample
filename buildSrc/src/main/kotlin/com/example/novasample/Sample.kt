@@ -20,7 +20,7 @@ import dev.android.playground.nova.core.base.dp
 import dev.android.playground.nova.core.framework.generated.*
 import dev.android.playground.nova.core.framework.styleables.CoreViewGroup_LayoutStyleable
 
-fun simpleCoreGenerated() {
+fun helloWorldNova() {
 
     theme(name = "MyMainTheme", parent = "Theme.Material") {
         // Simple attributes (can use primitive values or reference framework
