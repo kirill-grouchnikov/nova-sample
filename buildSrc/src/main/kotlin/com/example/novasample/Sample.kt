@@ -47,7 +47,7 @@ fun helloWorldNova() {
             overlapAnchor = true
         }
 
-        // Can specify only the specific attribute
+        // Can have only one specific attribute
         buttonStyle {
             backgroundTint = android.color.background_dark
         }
