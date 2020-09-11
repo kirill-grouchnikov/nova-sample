@@ -45,6 +45,18 @@ android {
     }
 }
 
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url 'http://oss.sonatype.org/content/repositories/snapshots'
+        }
+    }
+    dependencies {
+        classpath "org.pushing-pixels:nova-core:0.1-SNAPSHOT"
+    }
+}
+
 //configurations.all {
 //    resolutionStrategy.cacheChangingModulesFor(0, "seconds")
 //}
